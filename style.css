@@ -49,6 +49,7 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
+  margin-right:30px;
 }
 
 .nav-links li a {
