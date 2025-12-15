@@ -49,7 +49,7 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin-right:30px;
+  margin-right: 30px;
 }
 
 .nav-links li a {
@@ -106,6 +106,7 @@ body {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
+  
 }
 
 .btn {
@@ -141,11 +142,12 @@ body {
 }
 
 .hero-right img {
-  width: 550px;         /* adjust size if needed */
-  height: 550px;        /* keep width & height equal */
+  width: 80%;         /* adjust size if needed */
+  /* height: 550px;        keep width & height equal */
   object-fit: cover;    /* to fit face properly */
-  border-radius: 50%;   /* makes it round */
-  border: 4px solid #fff; /* optional white border */
+  border-radius: 50%;
+
+  border: 4px solid white;/* optional white border */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* light shadow */
 }
 
@@ -218,6 +220,7 @@ body {
   border-radius: 20px;
   font-size: 14px;
   color: #333;
+  
 }
 
 .skills-section {
@@ -427,8 +430,10 @@ body {
 }
 
 .contact-form .btn:hover {
-  background: #333;
-  transform: scale(1.05);
+  background: none;
+  border: 2px solid hotpink;
+  transform: scale(0.9);
+  color: hotpink;
 }
 
 /* Footer */
@@ -526,6 +531,31 @@ body {
     flex-direction: column;
     text-align: center;
   }
+  .navbar .logo{
+    margin-left: 90px;
+  }
+  #search {
+    width: 315px;
+    margin-left: 35px;
+
+  }
+  .hero-right img{
+
+    border-top-left-radius: 75%;
+    border-top-right-radius: 75%;
+    width: 100%;
+    /* border-top-left-radius: 75%;
+    border-top-right-radius: 75%;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: none; */
+
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .interests span{
+    margin-bottom: 10px;
+  }
 
   .projects-grid {
     flex-direction: column;
@@ -557,5 +587,6 @@ body {
 
   .contact-form .btn {
     width: 100%;
+    margin-bottom: 10px;
   }
 }
