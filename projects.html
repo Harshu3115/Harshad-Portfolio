@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshad Shinde | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="website icon" href="/assets/2.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #5b21b6;
+            --primary-light: #7c3aed;
+            --primary-mid: #8b5cf6;
+            --primary-soft: #ede9fe;
+            --accent: #a78bfa;
+            --bg: #f5f5fc;
+            --white: #ffffff;
+            --text: #1e1b4b;
+            --muted: #64748b;
+            --border: #e2e0f0;
+            --footer-bg: #13132a;
+            --card-shadow: 0 2px 24px rgba(91, 33, 182, .08);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+
+
+        .theme-btn {
+            background: none;
+            border: 1.5px solid var(--border);
+            color: var(--muted);
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: grid;
+            place-items: center;
+            transition: border-color .2s;
+        }
+
+        .theme-btn:hover {
+            border-color: var(--primary-mid);
+        }
+
+
+
+        /* ── HERO ── */
+        .projects-hero {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 52px;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-light);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .hero-label::after {
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: var(--primary-light);
+            border-radius: 2px;
+        }
+
+        .hero-heading {
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .hero-heading span {
+            color: var(--primary-light);
+        }
+
+        .hero-bio {
+            color: var(--muted);
+            font-size: .88rem;
+            line-height: 1.75;
+            margin-bottom: 28px;
+            max-width: 360px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 11px 22px;
+            font-size: .88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s, transform .15s;
+            text-decoration: none;
+        }
+
+        .btn-github:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--text);
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 11px 22px;
+            font-size: .88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color .2s, color .2s;
+            text-decoration: none;
+        }
+
+        .btn-contact:hover {
+            border-color: var(--primary-light);
+            color: var(--primary-light);
+        }
+
+        /* Hero illustration */
+        .hero-illus {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+        }
+
+        /* soft blob */
+        .illus-blob {
+            position: absolute;
+            width: 340px;
+            height: 280px;
+            background: radial-gradient(ellipse, #ddd6fe 0%, #ede9fe 50%, transparent 75%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+
+
+        /* laptop SVG mockup */
+        .laptop-wrap {
+            position: relative;
+            z-index: 2;
+            width: 660px;
+            animation: floatUp 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-8px);
+            }
+        }
+
+
+
+        .laptop-screen {
+            background: #0f0f23;
+            border-radius: 10px 10px 0 0;
+            padding: 18px 20px 14px;
+            border: 3px solid #333;
+        }
+
+        .ls-bar {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .ls-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .ls-dot.r {
+            background: #ff5f57;
+        }
+
+        .ls-dot.y {
+            background: #ffbd2e;
+        }
+
+        .ls-dot.g {
+            background: #28ca41;
+        }
+
+        .ls-code {
+            font-family: monospace;
+            font-size: .72rem;
+        }
+
+        .ls-line {
+            margin-bottom: 4px;
+        }
+
+        .lc-purple {
+            color: #a78bfa;
+        }
+
+        .lc-blue {
+            color: #60a5fa;
+        }
+
+        .lc-green {
+            color: #34d399;
+        }
+
+        .lc-white {
+            color: #e2e8f0;
+        }
+
+        .lc-orange {
+            color: #fbbf24;
+        }
+
+        .laptop-base {
+            background: #c8c8c8;
+            height: 16px;
+            border-radius: 0 0 8px 8px;
+            position: relative;
+        }
+
+        .laptop-base::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 6px;
+            background: #b0b0b0;
+            border-radius: 0 0 4px 4px;
+        }
+
+
+        /* ── FILTER TABS ── */
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 1.5px solid var(--border);
+            border-radius: 999px;
+            background: transparent;
+            font-family: 'Poppins', sans-serif;
+            font-size: .85rem;
+            font-weight: 500;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-light);
+            color: var(--primary-light);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-light);
+            color: #fff;
+            border-color: var(--primary-light);
+        }
+
+        /* ── PROJECT GRID ── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+            transition: transform .25s, box-shadow .25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 36px rgba(91, 33, 182, .14);
+        }
+
+        .project-card[data-hidden="true"] {
+            display: none;
+        }
+
+        /* Thumbnail */
+        .project-thumb {
+            position: relative;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .project-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s;
+        }
+
+        .project-card:hover .project-thumb img {
+            transform: scale(1.07);
+        }
+
+        /* Fallback gradient when no image */
+        .project-thumb .thumb-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            opacity: .35;
+        }
+
+        .num-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--primary-light);
+            color: #fff;
+            font-size: .72rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 6px;
+        }
+
+        /* Body */
+        .project-body {
+            padding: 16px 18px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-name {
+            font-size: .97rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .project-desc {
+            font-size: .78rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .tag {
+            background: var(--primary-soft);
+            color: var(--primary-light);
+            font-size: .68rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        /* Action btns */
+        .project-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-demo {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 0;
+            font-size: .78rem;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+            cursor: pointer;
+            transition: border-color .2s, color .2s;
+            background: transparent;
+        }
+
+        .btn-demo:hover {
+            border-color: var(--primary-light);
+            color: var(--primary-light);
+        }
+
+        .btn-ghub {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 0;
+            font-size: .78rem;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+            cursor: pointer;
+            transition: border-color .2s, color .2s;
+            background: transparent;
+        }
+
+        .btn-ghub:hover {
+            border-color: var(--text);
+            color: var(--text);
+        }
+
+        /* ── CTA BANNER ── */
+        .cta-banner {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+            /* dot pattern overlay */
+            background-image: radial-gradient(var(--primary-soft) 1.5px, transparent 1.5px);
+            background-size: 20px 20px;
+            background-position: right center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--white);
+            mask-image: linear-gradient(to right, #fff 55%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, #fff 55%, transparent 100%);
+        }
+
+        .cta-icon-wrap {
+            position: relative;
+            z-index: 1;
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: var(--primary-soft);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .cta-icon-wrap i {
+            color: var(--primary-light);
+            font-size: 1.6rem;
+        }
+
+        .cta-text {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .cta-text h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .cta-text p {
+            font-size: .84rem;
+            color: var(--muted);
+        }
+
+        .btn-view-gh {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 22px;
+            font-size: .88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s, transform .15s;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-view-gh:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* ── STATS ROW ── */
+        .stats-row {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 2rem 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+
+        .st-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 0 1.5rem;
+            border-right: 1px solid var(--border);
+        }
+
+        .st-item:first-child {
+            padding-left: 0;
+        }
+
+        .st-item:last-child {
+            border-right: none;
+        }
+
+        .st-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--primary-soft);
+            display: grid;
+            place-items: center;
+            color: var(--primary-light);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .st-num {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            line-height: 1;
+        }
+
+        .st-lbl {
+            font-size: .75rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+
+        /* ══ REVEAL ══ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .55s ease, transform .55s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ══ RESPONSIVE ══ */
+        @media (max-width: 900px) {
+            .projects-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-illus {
+                display: none;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .st-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .st-item:nth-child(3) {
+                border-top: 1px solid var(--border);
+                padding-top: 1rem;
+            }
+
+            .st-item:nth-child(4) {
+                border-right: none;
+                border-top: 1px solid var(--border);
+                padding-top: 1rem;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar {
+                padding: 0 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page {
+                padding: 40px 1rem 60px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+                padding: 1.5rem 1rem;
+            }
+
+            .st-item {
+                padding: 0 .5rem;
+                gap: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span>&lt;/&gt;</span> Harshad Shinde
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto gap-1">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <a href="/assets/Harshad_Shinde_9322916716.pdf" class="btn-cv nav-link"><i
+                            class="fas fa-download me-1"></i> Download Resume</a>
+                    <button class="theme-btn" id="themeToggle" title="Toggle theme"><i class="fas fa-sun"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Hero -->
+            <div class="projects-hero reveal">
+                <div class="hero-left">
+                    <div class="hero-label">MY PROJECTS</div>
+                    <h1 class="hero-heading">Projects That<br><span>I Built</span></h1>
+                    <p class="hero-bio">Here are some of my selected projects. Each project taught me something new and
+                        helped me grow as a developer.</p>
+                    <div class="hero-btns">
+                        <a href="https://github.com/Harshu3115" class="btn-github"><i class="fab fa-github"></i> GitHub Profile</a>
+                        <a href="contact.html" class="btn-contact"><i class="fas fa-envelope"></i> Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-illus">
+                    <div class="illus-blob"></div>
+
+                    <!-- Laptop mockup -->
+                    <div class="laptop-wrap">
+
+                        <img src="/assets/project-img.png" width="100%" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="filter-bar reveal" style="transition-delay:.08s">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="database">Database</button>
+                <button class="filter-btn" data-filter="others">Others</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Projects grid -->
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- 01 Bus Tracking -->
+                <div class="project-card reveal" style="transition-delay:.1s" data-category="fullstack java database">
+                    <div class="project-thumb">
+                        <img src="/assets/bus.png" alt="bus tracking system">
+                        <span class="num-badge">01</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-name">Bus Tracking System</div>
+                        <div class="project-desc">>Developed a Bus Tracking System using HTML, CSS, JavaScript, JDBC,
+                            Servlet, and MySQL for route management and scheduling.</div>
+                        <div class="tags">
+                            <span class="tag">Java</span><span class="tag">Servlet</span><span
+                                class="tag">JDBC</span><span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Harshu3115/Bus-Tracking-System.git" class="btn-ghub"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 Ecommerce -->
+                <div class="project-card reveal" style="transition-delay:.13s" data-category="java database">
+                    <div class="project-thumb">
+                        <img src="/assets/ecommerce.png" alt="ecommerce">
+                        <span class="num-badge">02</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-name">Vogue Hub fashion & Lifestyle</div>
+                        <div class="project-desc">Developed a responsive eCommerce application using Spring Boot,
+                            MySQL, authentication, cart, and order management with scalable, user-friendly
+                            performance.</div>
+                        <div class="tags">
+                            <span class="tag">Java</span><span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Harshu3115/ecommerce-springboot.git" class="btn-ghub"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 AI Resume Analyzer -->
+                <div class="project-card reveal" style="transition-delay:.16s" data-category="frontend">
+                    <div class="project-thumb">
+                        <img src="/assets/ai.png" alt="AI Resume Analyzer">
+                        <span class="num-badge">03</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-name">AI Resume Analyzer</div>
+                        <div class="project-desc">Built an AI Resume Analyzer using Flask, NLP, TF-IDF, and SQLite for
+                            ATS scoring, resume matching, and suggestions.</div>
+                        <div class="tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://ai-resume-analyzer-9rbl.onrender.com/" class="btn-demo"><i
+                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Harshu3115/ai-resume-analyzer-" class="btn-ghub"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 Portfolio -->
+                <div class="project-card reveal" style="transition-delay:.19s" data-category="frontend">
+                    <div class="project-thumb">
+                        <img src="/assets/portfolio (2).png" alt="Portfolio Website">
+                        <span class="num-badge">04</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-name">Portfolio Website</div>
+                        <div class="project-desc">Developed a responsive portfolio website using HTML, CSS, and
+                            JavaScript, showcasing projects, skills, resume, and contact features professionally.</div>
+                        <div class="tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://harshad-portfolio-9j3l.onrender.com/" class="btn-demo"><i
+                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Harshu3115/Harshad-Portfolio" class="btn-ghub"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05 Tic Tac Toe -->
+                <div class="project-card reveal" style="transition-delay:.22s" data-category="frontend others">
+                    <div class="project-thumb">
+                        <img src="/assets/tic.png" alt="Tic Tac Toe">
+                        <span class="num-badge">05</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-name">Tic Tac Toe Game</div>
+                        <div class="project-desc">Developed an interactive Tic Tac Toe game using HTML, CSS, and
+                            JavaScript with win detection, score tracking, and responsive design.</div>
+                        <div class="tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Harshu3115/Tic-Tac-Toe-Game-" class="btn-ghub"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 06 Volunteer Management System -->
+                <div class="project-card reveal" style="transition-delay:.25s"
+                    data-category="fullstack database frontend java database">
+                    <div class="project-thumb">
+                        <img src="/assets/volunteer.png" alt="Volunteer Management System">
+                        <span class="num-badge">06</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-name">Volunteer Management System</div>
+                        <div class="project-desc">Developed a Volunteer Management System using Spring Boot for
+                            volunteer registration, event management, task assignment, activity tracking, and
+                            communication.</div>
+                        <div class="tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Harshu3115/Volunteer-Event-Management-System"
+                                class="btn-ghub"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="cta-banner reveal" style="transition-delay:.28s">
+                <div class="cta-icon-wrap"><i class="fab fa-github"></i></div>
+                <div class="cta-text">
+                    <h3>Want to see more?</h3>
+                    <p>Check out my GitHub profile for more projects and contributions.</p>
+                </div>
+                <a href="https://github.com/Harshu3115" class="btn-view-gh"><i class="fas fa-external-link-alt"></i>
+                    View GitHub Profile</a>
+            </div>
+
+            <!-- Stats row -->
+            <div class="stats-row reveal" style="transition-delay:.32s">
+                <div class="st-item">
+                    <div class="st-icon"><i class="fas fa-briefcase"></i></div>
+                    <div>
+                        <div class="st-num" data-target="10">0</div>
+                        <div class="st-lbl">Projects Completed</div>
+                    </div>
+                </div>
+                <div class="st-item">
+                    <div class="st-icon"><i class="fas fa-code"></i></div>
+                    <div>
+                        <div class="st-num" data-target="5">0</div>
+                        <div class="st-lbl">Technologies Used</div>
+                    </div>
+                </div>
+                <div class="st-item">
+                    <div class="st-icon"><i class="fas fa-calendar-days"></i></div>
+                    <div>
+                        <div class="st-num" data-target="1">0</div>
+                        <div class="st-lbl">Years Experience</div>
+                    </div>
+                </div>
+                <div class="st-item">
+                    <div class="st-icon"><i class="fas fa-bullseye"></i></div>
+                    <div>
+                        <div class="st-num" data-target="100" data-suffix="%">0</div>
+                        <div class="st-lbl">Dedication</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ══ PAGE ══ -->
+    <main class="page">
+
+
+
+
+
+    </main>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Brand col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand"><span>&lt;/&gt;</span> Harshad Shinde</div>
+                    <p class="footer-desc">Building modern web applications with clean code and great user experience.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/Harshu3115"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/harshad-shinde3115b2ab/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/harshadshinde_3115/"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:harshadshinde3131@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="skills.html">Skills <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="projects.html">Projects <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="experience.html">Experience <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="contact.html">Contact <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="#">Frontend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">Backend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">API Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-4 col-md-6">
+                    <h6>Let's Connect</h6>
+                    <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:20px;">Have a
+                        project in mind or want to work together?</p>
+                    <a href="contact.html" class="btn-touch">Get In Touch <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div class="footer-bottom ">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>© 2024 Harshad Shinde. All rights reserved.</p>
+                    </div>
+                    <!-- <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <p>Made with <span style="color:#ef4444;">❤</span> and lots of ☕</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Scroll reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+        }, { threshold: 0.08 });
+        revealEls.forEach(el => revealObs.observe(el));
+
+        // ── Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                cards.forEach(card => {
+                    const cats = card.dataset.category || '';
+                    if (filter === 'all' || cats.includes(filter)) {
+                        card.style.display = 'flex';
+                        setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px)';
+                        setTimeout(() => { card.style.display = 'none'; }, 300);
+                    }
+                });
+            });
+        });
+
+        // ── Counter
+        function animateCount(el) {
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix || '+';
+            let start = null;
+            const step = ts => {
+                if (!start) start = ts;
+                const p = Math.min((ts - start) / 1400, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.floor(ease * target) + suffix;
+                if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+        const counters = document.querySelectorAll('.st-num[data-target]');
+        const cntObs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); cntObs.unobserve(e.target); } });
+        }, { threshold: 0.5 });
+        counters.forEach(el => cntObs.observe(el));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

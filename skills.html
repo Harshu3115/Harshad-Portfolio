@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshad Shinde | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="website icon" href="/assets/2.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #5b21b6;
+            --primary-light: #7c3aed;
+            --primary-mid: #8b5cf6;
+            --primary-soft: #ede9fe;
+            --accent: #a78bfa;
+            --bg: #f5f5fc;
+            --white: #ffffff;
+            --text: #1e1b4b;
+            --muted: #64748b;
+            --border: #e2e0f0;
+            --footer-bg: #13132a;
+            --card-shadow: 0 2px 24px rgba(91, 33, 182, .08);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+       
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span>&lt;/&gt;</span> Harshad Shinde
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto gap-1">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <a href="/assets/Harshad_Shinde_9322916716.pdf" class="btn-cv nav-link"><i
+                            class="fas fa-download me-1"></i> Download Resume</a>
+                    <button class="theme-btn" id="themeToggle" title="Toggle theme"><i class="fas fa-sun"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══ PAGE ══ -->
+    <main class="page">
+
+        <!-- Hero top -->
+        <div class="skills-hero reveal">
+            <!-- Left -->
+            <div class="hero-left">
+                <div class="skills-label">MY SKILLS</div>
+                <h1 class="hero-heading">My Technical Skills</h1>
+                <p class="hero-bio">I love learning new technologies and building modern web applications with clean and
+                    efficient code.</p>
+                <div class="hero-line"></div>
+            </div>
+
+            <!-- Right orbit illustration -->
+            <div class="orbit-wrap">
+                <div class="orbit-circle oc2"></div>
+                <div class="orbit-circle oc1"></div>
+                <div class="orbit-center">
+                    <i class="fas fa-code"></i>
+                </div>
+                <!-- floating badges -->
+                <div class="tech-badge tb-js tb-js-bg" style="top:4px;left:30px">JS</div>
+                <div class="tech-badge tb-tag" style="top:4px;right:24px;font-size:1.3rem;color:var(--primary-light)">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="tech-badge tb-react" style="bottom:14px;left:20px;color:#61dafb">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="tech-badge tb-node" style="bottom:14px;right:16px;color:#6cc24a">
+                    <i class="fab fa-node-js"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+    <div class="container">
+        <div class="row">
+            <!-- ── Skill cards 2×2 grid ── -->
+            <div class="skills-grid">
+
+                <!-- Frontend -->
+                <div class="skill-card reveal" style="transition-delay:.05s">
+                    <div class="skill-card-header">
+                        <div class="skill-card-icon"><i class="fas fa-display"></i></div>
+                        <div class="skill-card-title">Frontend Development</div>
+                    </div>
+                    <div class="skill-bar-list">
+                        <div class="skill-bar-item" data-pct="95">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>HTML</span>
+                                <span class="skill-pct">95%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="90">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>CSS</span>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="85">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>JavaScript</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="90">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>Bootstrap</span>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="80">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>React.js</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-card reveal" style="transition-delay:.1s">
+                    <div class="skill-card-header">
+                        <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+                        <div class="skill-card-title">Backend Development</div>
+                    </div>
+                    <div class="skill-bar-list">
+                        <div class="skill-bar-item" data-pct="85">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>Java</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="80">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>Python</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="75">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>Advance Java</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="70">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>Spring Boot</span>
+                                <span class="skill-pct">70%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="85">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>REST API</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-card reveal" style="transition-delay:.15s">
+                    <div class="skill-card-header">
+                        <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+                        <div class="skill-card-title">Database</div>
+                    </div>
+                    <div class="skill-bar-list">
+                        <div class="skill-bar-item" data-pct="90">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>MySQL</span>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="85">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>JDBC</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <!-- <div class="skill-bar-item" data-pct="75">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>JDBC</span>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-card reveal" style="transition-delay:.2s">
+                    <div class="skill-card-header">
+                        <div class="skill-card-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                        <div class="skill-card-title">Tools &amp; Others</div>
+                    </div>
+                    <div class="skill-bar-list">
+                        <div class="skill-bar-item" data-pct="90">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>Git</span>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="90">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>GitHub</span>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="95">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>VS Code</span>
+                                <span class="skill-pct">95%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item" data-pct="85">
+                            <div class="skill-bar-top">
+                                <span class="skill-name"><span class="skill-dot"></span>Postman</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ── Tools I Use ── -->
+            <div class="tools-section reveal" style="transition-delay:.25s">
+                <div class="tools-title">Tools I Use</div>
+                <div class="tools-underline"></div>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <div class="tool-icon" style="color:#f05032"><i class="fab fa-git-alt"></i></div>
+                        <span class="tool-name">Git</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon" style="color:#24292e"><i class="fab fa-github"></i></div>
+                        <span class="tool-name">GitHub</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon" style="color:#007acc"><i class="fas fa-code"></i></div>
+                        <span class="tool-name">VS Code</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon" style="color:#ef5b25"><i class="fas fa-paper-plane"></i></div>
+                        <span class="tool-name">Postman</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon" style="color:#a259ff"> <i class="devicon-eclipse-plain colored"></i></div>
+                        <span class="tool-name">Eclipse</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon" style="color:#4285f4"><i class="fab fa-chrome"></i></div>
+                        <span class="tool-name">Chrome DevTools</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon" style="color:#00c7b7"><i class="fas fa-cloud"></i></div>
+                        <span class="tool-name">Netlify</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Brand col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand"><span>&lt;/&gt;</span> Harshad Shinde</div>
+                    <p class="footer-desc">Building modern web applications with clean code and great user experience.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/Harshu3115"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/harshad-shinde3115b2ab/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/harshadshinde_3115/"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:harshadshinde3131@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="skills.html">Skills <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="projects.html">Projects <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="experience.html">Experience <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="contact.html">Contact <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="#">Frontend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">Backend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">API Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-4 col-md-6">
+                    <h6>Let's Connect</h6>
+                    <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:20px;">Have a
+                        project in mind or want to work together?</p>
+                    <a href="contact.html" class="btn-touch">Get In Touch <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div class="footer-bottom ">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>© 2024 Harshad Shinde. All rights reserved.</p>
+                    </div>
+                    <!-- <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <p>Made with <span style="color:#ef4444;">❤</span> and lots of ☕</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Scroll reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+            });
+        }, { threshold: 0.1 });
+        revealEls.forEach(el => revealObs.observe(el));
+
+        // ── Animate skill bars when visible
+        const bars = document.querySelectorAll('.skill-bar-item');
+        const barObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const pct = e.target.dataset.pct;
+                    e.target.querySelector('.bar-fill').style.width = pct + '%';
+                    barObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        bars.forEach(b => barObs.observe(b));
+
+        // ── Counter animation
+        function animateCount(el) {
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix || '+';
+            if (!el.dataset.target) return;
+            let start = null;
+            const duration = 1400;
+            const step = ts => {
+                if (!start) start = ts;
+                const p = Math.min((ts - start) / duration, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.floor(ease * target) + suffix;
+                if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+        const counters = document.querySelectorAll('.stat-num[data-target]');
+        const cntObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { animateCount(e.target); cntObs.unobserve(e.target); }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(el => cntObs.observe(el));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshad Shinde | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="website icon" href="/assets/2.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #5b21b6;
+            --primary-light: #7c3aed;
+            --primary-mid: #8b5cf6;
+            --primary-soft: #ede9fe;
+            --accent: #a78bfa;
+            --bg: #f0f0fa;
+            --white: #ffffff;
+            --text: #1e1b4b;
+            --muted: #64748b;
+            --border: #e2e0f0;
+            --footer-bg: #13132a;
+            --card-shadow: 0 2px 24px rgba(91, 33, 182, .09);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+
+
+        .theme-btn {
+            background: none;
+            border: 1.5px solid var(--border);
+            color: var(--muted);
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: grid;
+            place-items: center;
+            transition: border-color .2s;
+        }
+
+        .theme-btn:hover {
+            border-color: var(--primary-mid);
+        }
+
+        /* ══ PAGE ══ */
+        .page {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 70px 1.5rem 80px;
+        }
+
+        /* ── Hero heading ── */
+        .contact-hero {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .contact-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--primary-light);
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .contact-label::before,
+        .contact-label::after {
+            content: '';
+            width: 48px;
+            height: 1.5px;
+            background: var(--primary-light);
+            border-radius: 2px;
+        }
+
+        .contact-label .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary-light);
+        }
+
+        .contact-heading {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 14px;
+            line-height: 1.15;
+        }
+
+        .contact-sub {
+            color: var(--muted);
+            font-size: .95rem;
+            line-height: 1.7;
+        }
+
+        /* ── Two-column layout ── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 440px 2fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ── Card base ── */
+        .card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+
+        /* ── Get in touch ── */
+        .git-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .git-underline {
+            width: 36px;
+            height: 3px;
+            background: var(--primary-light);
+            border-radius: 2px;
+            margin-bottom: 18px;
+        }
+
+        .git-desc {
+            font-size: .84rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 26px;
+        }
+
+        /* Info rows */
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-soft);
+            display: grid;
+            place-items: center;
+            color: var(--primary-light);
+            font-size: .9rem;
+            flex-shrink: 0;
+        }
+
+        .info-text strong {
+            display: block;
+            font-size: .85rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .info-text span {
+            font-size: .8rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* Follow me */
+        .follow-label {
+            font-size: .88rem;
+            font-weight: 700;
+            margin: 22px 0 12px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border);
+            background: transparent;
+            display: grid;
+            place-items: center;
+            color: var(--muted);
+            font-size: .95rem;
+            text-decoration: none;
+            transition: border-color .2s, color .2s, background .2s;
+            cursor: pointer;
+        }
+
+        .social-btn:hover {
+            border-color: var(--primary-light);
+            color: var(--primary-light);
+            background: var(--primary-soft);
+        }
+
+        /* ── Message form ── */
+        .form-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .form-underline {
+            width: 36px;
+            height: 3px;
+            background: var(--primary-light);
+            border-radius: 2px;
+            margin-bottom: 24px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .field {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .field input,
+        .field textarea {
+            width: 100%;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 13px 44px 13px 16px;
+            font-family: 'Poppins', sans-serif;
+            font-size: .87rem;
+            color: var(--text);
+            background: var(--white);
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+            resize: none;
+        }
+
+        .field input::placeholder,
+        .field textarea::placeholder {
+            color: var(--muted);
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, .1);
+        }
+
+        .field textarea {
+            height: 140px;
+            padding-top: 14px;
+        }
+
+        .field-icon {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: .88rem;
+            pointer-events: none;
+        }
+
+        .field.textarea-wrap .field-icon {
+            top: 18px;
+            transform: none;
+        }
+
+        .field-full {
+            margin-bottom: 14px;
+        }
+
+        .btn-send {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 13px 30px;
+            font-size: .92rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s, transform .15s, box-shadow .2s;
+            margin-top: 6px;
+        }
+
+        .btn-send:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(91, 33, 182, .3);
+        }
+
+        /* success toast */
+        .toast {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            background: #ecfdf5;
+            border: 1px solid #6ee7b7;
+            color: #065f46;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-size: .84rem;
+            font-weight: 500;
+            margin-top: 14px;
+        }
+
+        .toast.show {
+            display: flex;
+            animation: fadeIn .3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            /* background: var(--white); */
+            border-radius: 10px;
+            padding: 1.6rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 0;
+        }
+
+        .cta-icon-wrap {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--primary-soft);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .cta-icon-wrap i {
+            color: var(--primary-light);
+            font-size: 1.4rem;
+        }
+
+        .cta-text {
+            flex: 1;
+        }
+
+        .cta-text h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .cta-text p {
+            font-size: .84rem;
+            color: var(--muted);
+        }
+
+        .btn-hire-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--primary-light);
+            border: 1.5px solid var(--primary-light);
+            border-radius: 10px;
+            padding: 10px 22px;
+            font-size: .88rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background .2s, color .2s;
+            white-space: nowrap;
+        }
+
+        .btn-hire-outline:hover {
+            background: var(--primary-light);
+            color: #fff;
+        }
+
+
+
+        /* ══ REVEAL ══ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .55s ease, transform .55s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ══ RESPONSIVE ══ */
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar {
+                padding: 0 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page {
+                padding: 50px 1rem 60px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 6px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span>&lt;/&gt;</span> Harshad Shinde
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto gap-1">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <a href="/assets/Harshad_Shinde_9322916716.pdf" class="btn-cv nav-link"><i
+                            class="fas fa-download me-1"></i> Download Resume</a>
+                    <button class="theme-btn" id="themeToggle" title="Toggle theme"><i class="fas fa-sun"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══ MAIN ══ -->
+    <main class="page">
+
+        <!-- Hero heading -->
+        <div class="contact-hero reveal">
+            <div class="contact-label">
+                <span class="dot"></span>
+                Contact Me
+                <span class="dot"></span>
+            </div>
+            <h1 class="contact-heading">Let's Work Together</h1>
+            <p class="contact-sub">
+                Have a project in mind or want to discuss an opportunity?<br>
+                Feel free to reach out to me.
+            </p>
+        </div>
+
+        <!-- Two-col grid -->
+        <div class="contact-grid">
+
+            <!-- Get in Touch -->
+            <div class="card reveal" style="transition-delay:.1s">
+                <h2 class="git-title">Get In Touch</h2>
+                <div class="git-underline"></div>
+                <p class="git-desc">I'm currently available for freelance work or full-time opportunities. If you have
+                    any questions or just want to say hello, don't hesitate to contact me!</p>
+
+                <ul class="info-list">
+                    <li class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text">
+                            <strong>Email</strong>
+                            <span>harshadshinde3131@gmail.com</span>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="info-text">
+                            <strong>Phone</strong>
+                            <span>9322916716</span>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <strong>Location</strong>
+                            <span>Maharashtra, India</span>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="info-text">
+                            <strong>Availability</strong>
+                            <span>Available for Freelance<br>Full-time Opportunities</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <p class="follow-label">Follow Me</p>
+                <div class="socials">
+                    <a href="https://github.com/Harshu3115" class="social-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harshad-shinde3115b2ab/" class="social-btn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/harshadshinde_3115/" class="social-btn"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="mailto:harshadshinde3131@gmail.com" class="social-btn">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Message form -->
+            <div class="card reveal" style="transition-delay:.18s">
+                <h2 class="form-title">Send Me a Message</h2>
+                <div class="form-underline"></div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <input type="text" id="name" placeholder="Your Name" autocomplete="off" />
+                        <span class="field-icon"><i class="fas fa-user"></i></span>
+                    </div>
+                    <div class="field">
+                        <input type="email" id="email" placeholder="Your Email" autocomplete="off" />
+                        <span class="field-icon"><i class="fas fa-envelope"></i></span>
+                    </div>
+                </div>
+
+                <div class="field field-full">
+                    <input type="text" id="subject" placeholder="Subject" />
+                    <span class="field-icon"><i class="fas fa-tag"></i></span>
+                </div>
+
+                <div class="field field-full textarea-wrap">
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                    <span class="field-icon"><i class="fas fa-pen-to-square"></i></span>
+                </div>
+
+                <button class="btn-send" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+
+                <div class="toast" id="toast">
+                    <i class="fas fa-circle-check"></i>
+                    Message sent successfully! I'll get back to you soon.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner reveal" style="transition-delay:.25s">
+            <div class="cta-icon-wrap">
+                <i class="fas fa-paper-plane"></i>
+            </div>
+            <div class="cta-text">
+                <h3>Let's build something amazing together!</h3>
+                <p>I'm excited to hear about your ideas and bring them to life.</p>
+            </div>
+            <a href="#" class="btn-hire-outline">Hire Me <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+    </main>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Brand col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand"><span>&lt;/&gt;</span> Harshad Shinde</div>
+                    <p class="footer-desc">Building modern web applications with clean code and great user experience.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/Harshu3115"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/harshad-shinde3115b2ab/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/harshadshinde_3115/"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:harshadshinde3131@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="skills.html">Skills <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="projects.html">Projects <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="experience.html">Experience <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="contact.html">Contact <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="#">Frontend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">Backend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">API Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-4 col-md-6">
+                    <h6>Let's Connect</h6>
+                    <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:20px;">Have a
+                        project in mind or want to work together?</p>
+                    <a href="contact.html" class="btn-touch">Get In Touch <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div class="footer-bottom ">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>© 2024 Harshad Shinde. All rights reserved.</p>
+                    </div>
+                    <!-- <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <p>Made with <span style="color:#ef4444;">❤</span> and lots of ☕</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // ── Scroll reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+            });
+        }, { threshold: 0.1 });
+        revealEls.forEach(el => revealObs.observe(el));
+
+        // ── Send message simulation
+        function sendMessage() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields before sending.');
+                return;
+            }
+
+            const btn = document.querySelector('.btn-send');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                btn.disabled = false;
+
+                // clear fields
+                ['name', 'email', 'subject', 'message'].forEach(id => document.getElementById(id).value = '');
+
+                // show toast
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 4000);
+            }, 1600);
+        }
+
+        emailjs.init("SPPF4O1qZWFDVMMmi");
+
+        function sendMessage() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields before sending.');
+                return;
+            }
+
+            const btn = document.querySelector('.btn-send');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            emailjs.send(
+                "service_cl18ddp",
+                "template_k76a7cq",
+                {
+                    name: name,
+                    email: email,
+                    title: subject,
+                    message: message
+                }
+            )
+                .then(() => {
+
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    btn.disabled = false;
+
+                    // Clear form
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('subject').value = '';
+                    document.getElementById('message').value = '';
+
+                    // Show toast message
+                    const toast = document.getElementById('toast');
+                    toast.classList.add('show');
+
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 4000);
+
+                })
+                .catch((error) => {
+
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    btn.disabled = false;
+
+                    console.error(error);
+
+                    alert('Failed to send message. Please try again.');
+                });
+        }
+
+    </script>
+
+</body>
+
+</html>

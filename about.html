@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshad Shinde | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="website icon" href="/assets/2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    :root {
+        --primary: #5b21b6;
+        --primary-light: #7c3aed;
+        --primary-soft: #ede9fe;
+        --primary-mid: #8b5cf6;
+        --accent: #a78bfa;
+        --bg: #f5f5fa;
+        --white: #ffffff;
+        --text: #1e1b4b;
+        --muted: #64748b;
+        --border: #e2e0f0;
+        --card-shadow: 0 2px 20px rgba(91, 33, 182, .08);
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+    }
+</style>
+
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span>&lt;/&gt;</span> Harshad Shinde
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto gap-1">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <a href="/assets/Harshad_Shinde_9322916716.pdf" class="btn-cv nav-link"><i
+                            class="fas fa-download me-1"></i> Download Resume</a>
+                    <button class="theme-btn" id="themeToggle" title="Toggle theme"><i class="fas fa-sun"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══ PAGE ══ -->
+    <main class="page">
+
+        <!-- ── About Top ── -->
+        <div class="about-top">
+
+            <!-- Left -->
+            <div class="reveal">
+                <div class="about-label">About Me</div>
+                <h1 class="about-heading">Who I Am</h1>
+                <p class="about-bio">I'm Harshad Shinde, a passionate Web Developer focused on creating modern,
+                    responsive, and user-friendly websites. I have experience with HTML, CSS, JavaScript, Bootstrap,
+                    Java, MySQL, and full-stack web development. I enjoy building real-world projects, learning new
+                    technologies, and helping businesses establish a strong online presence through effective digital
+                    solutions.
+                </p>
+
+                <ul class="info-list">
+                    <li class="info-item">
+                        <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <strong>Location</strong>
+                            <span>Pune, Maharashtra, India</span>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text">
+                            <strong>Email</strong>
+                            <span>harshadshinde3131@example.com</span>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="info-text">
+                            <strong>Availability</strong>
+                            <span>Available for Freelance</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="signature">Harshad Shinde</div>
+                <div class="sig-line"></div>
+            </div>
+
+            <!-- Right photo -->
+            <div class="about-photo-card reveal" style="transition-delay:.15s">
+
+
+
+                <!-- Replace src with your actual image path -->
+                <div class="photo-placeholder">
+
+                    <img src="/assets/harsh.jpg" alt="harshad">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── Stats Bar ── -->
+        <div class="stats-bar reveal" style="transition-delay:.1s">
+            <div class="stat-item">
+                <div class="stat-icon-about"><i class="fas fa-code"></i></div>
+                <div class="stat-number" data-target="10">0</div>
+                <div class=".stat-label-about">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon-about"><i class="fas fa-face-smile"></i></div>
+                <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                <div class=".stat-label-about">Client Satisfaction</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon-about"><i class="fas fa-trophy"></i></div>
+                <div class="stat-number" data-target="1">0</div>
+                <div class=".stat-label-about">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon-about"><i class="fas fa-headset"></i></div>
+                <div class="stat-number" data-suffix="/7">24/7</div>
+                <div class=".stat-label-about">Support Available</div>
+            </div>
+        </div>
+
+        <!-- ── Bottom Grid ── -->
+        <div class="bottom-grid">
+
+            <!-- My Journey -->
+            <div class="journey-card reveal" style="transition-delay:.2s">
+                <h2 class="section-title">My Journey</h2>
+                <div class="section-underline"></div>
+                <div class="timeline">
+
+                    <div class="tl-item">
+                        <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="tl-body">
+                            <div class="tl-header">
+                                <div>
+                                    <div class="tl-title">Education</div>
+                                    <div class="tl-sub">B.Tech. Computer Engineering</div>
+                                    <div class="tl-desc">Dr. Babasaheb Ambedakar Technological University Lonere</div>
+                                </div>
+                                <span class="tl-year">2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-icon"><i class="fas fa-code"></i></div>
+                        <div class="tl-body">
+                            <div class="tl-header">
+                                <div>
+                                    <div class="tl-title">Web Development Journey</div>
+                                    <div class="tl-desc">Started learning HTML, CSS, JavaScript and building small
+                                        projects.</div>
+                                </div>
+                                <span class="tl-year">2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="tl-body">
+                            <div class="tl-header">
+                                <div>
+                                    <div class="tl-title">Full Stack Developer</div>
+                                    <div class="tl-desc">Working with modern frameworks like React.js, Spring Boot,
+                                        MySQL and Java.</div>
+                                </div>
+                                <span class="tl-year">2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-icon"><i class="fas fa-database"></i></div>
+                        <div class="tl-body">
+                            <div class="tl-header">
+                                <div>
+                                    <div class="tl-title">Data Science</div>
+                                    <div class="tl-desc">
+                                        Exploring Data Science concepts including Data Analytics,
+                                        Machine Learning, Statistical Analysis, Python, Pandas,
+                                        NumPy, and Data Visualization techniques.
+                                    </div>
+                                </div>
+                                <span class="tl-year">2025-26</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- What I Do -->
+            <div class="whatido-card reveal" style="transition-delay:.25s">
+                <h2 class="section-title">What I Do</h2>
+                <div class="section-underline"></div>
+                <div class="wid-grid">
+
+                    <div class="wid-item">
+                        <div class="wid-icon"><i class="fas fa-display"></i></div>
+                        <div class="wid-title">Frontend Development</div>
+                        <div class="wid-desc">Building responsive and interactive UIs.</div>
+                    </div>
+
+                    <div class="wid-item">
+                        <div class="wid-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="wid-title">Backend Development</div>
+                        <div class="wid-desc">Creating secure RESTful APIs and services.</div>
+                    </div>
+
+                    <div class="wid-item">
+                        <div class="wid-icon"><i class="fas fa-database"></i></div>
+                        <div class="wid-title">Database Management</div>
+                        <div class="wid-desc">Designing and managing databases efficiently.</div>
+                    </div>
+
+                    <div class="wid-item">
+                        <div class="wid-icon"><i class="fas fa-diamond"></i></div>
+                        <div class="wid-title">Problem Solving</div>
+                        <div class="wid-desc">Solving real-world problems with clean code.</div>
+                    </div>
+
+                    <div class="wid-item">
+                        <div class="wid-icon"><i class="fas fa-users"></i></div>
+                        <div class="wid-title">Team Collaboration</div>
+                        <div class="wid-desc">Working in teams using Git and Agile methodologies.</div>
+                    </div>
+
+                    <div class="wid-item">
+                        <div class="wid-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="wid-title">Continuous Learning</div>
+                        <div class="wid-desc">Always exploring new technologies.</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Brand col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand"><span>&lt;/&gt;</span> Harshad Shinde</div>
+                    <p class="footer-desc">Building modern web applications with clean code and great user experience.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/Harshu3115"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/harshad-shinde3115b2ab/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/harshadshinde_3115/"><i class="fab fa-instagram"></i></a>
+                        <a href="harshadshinde3131@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="skills.html">Skills <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="projects.html">Projects <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="experience.html">Experience <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="contact.html">Contact <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                        <li><a href="#">Frontend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">Backend Development <i class="fas fa-chevron-right"
+                                    style="font-size:.7rem"></i></a></li>
+                        <li><a href="#">API Development <i class="fas fa-chevron-right" style="font-size:.7rem"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-4 col-md-6">
+                    <h6>Let's Connect</h6>
+                    <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:20px;">Have a
+                        project in mind or want to work together?</p>
+                    <a href="contact.html" class="btn-touch">Get In Touch <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div class="footer-bottom ">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>© 2024 Harshad Shinde. All rights reserved.</p>
+                    </div>
+                    <!-- <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <p>Made with <span style="color:#ef4444;">❤</span> and lots of ☕</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>// ── Counter animation ──
+        function animateCounter(el) {
+            const target = parseInt(el.dataset.target || el.textContent);
+            const suffix = el.dataset.suffix || (el.dataset.target && el.textContent.includes('+') ? '+' : '');
+            const hasSuffix = el.dataset.suffix;
+            if (!el.dataset.target) return; // static like 24/7
+            let start = 0;
+            const duration = 1400;
+            const step = timestamp => {
+                if (!start) start = timestamp;
+                const progress = Math.min((timestamp - start) / duration, 1);
+                const ease = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.floor(ease * target) + (hasSuffix ? el.dataset.suffix : '+');
+                if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+
+        const statNums = document.querySelectorAll('.stat-number[data-target]');
+        const counterObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); }
+            });
+        }, { threshold: 0.5 });
+        statNums.forEach(el => counterObs.observe(el));
+
+        // ── Scroll reveal ──
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => observer.observe(el));
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
